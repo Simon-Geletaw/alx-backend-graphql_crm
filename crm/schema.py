@@ -19,7 +19,7 @@ from graphene_django.types import DjangoObjectType
 class CustomerType(DjangoObjectType):
     class Meta:
         model = Customer
-        fields = ("id", "name", "email", "created_at")
+        fields = ("id", "name", "email", "phone")
         filter_fields = {
             'name': ['exact', 'icontains', 'istartswith'],
             'created_at': ['gte', 'lte'],
